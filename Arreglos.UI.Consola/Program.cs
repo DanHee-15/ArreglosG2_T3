@@ -27,26 +27,35 @@ internal class Program
             Console.WriteLine("\nPares ordenados\n");
             verPares.Ordenar();
             Console.WriteLine(verPares);
-        
+
+            Console.ReadKey();
+            Console.WriteLine("\nPrimos\n");
+            var verPrimos = oMiArreglo.ObtenerPrimos();
+
+            Console.WriteLine("\nPrimos ordenados\n");
+            verPares.Ordenar();
+            Console.WriteLine(verPrimos);
 
 
 
-        //    oMiArreglo.Agregar(10);
-        //    oMiArreglo.Agregar(5);
-        //    oMiArreglo.Agregar(-4);
+
+
+            //    oMiArreglo.Agregar(10);
+            //    oMiArreglo.Agregar(5);
+            //    oMiArreglo.Agregar(-4);
 
 
 
-        //    Console.WriteLine(oMiArreglo);
-        //    Console.ReadKey();
+            //    Console.WriteLine(oMiArreglo);
+            //    Console.ReadKey();
 
-        //    oMiArreglo.Insertar(200, -50);
+            //    oMiArreglo.Insertar(200, -50);
 
-        //    Console.WriteLine(oMiArreglo);
-        //    Console.ReadKey();
-        //    oMiArreglo.Eliminar(0);
+            //    Console.WriteLine(oMiArreglo);
+            //    Console.ReadKey();
+            //    oMiArreglo.Eliminar(0);
 
-        //
+            //
         }
 
 

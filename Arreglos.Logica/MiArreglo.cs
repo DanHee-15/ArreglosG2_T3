@@ -71,6 +71,9 @@ namespace Arreglos.Logica
                 }
             }
         }
+
+
+      
       
         //Metodo Cambiar
         public void Cambiar(ref int a,  ref int b)
@@ -145,7 +148,7 @@ namespace Arreglos.Logica
             int contandoPares = 0;
             for (int i = 0; i < _tope; i++)
             {
-                if (_arreglo[i] % 2 == 0)
+                if (EsPar(_arreglo[i]))
                 {
                     contandoPares++;
                 }
@@ -154,12 +157,58 @@ namespace Arreglos.Logica
 
             for(int j = 0; j < _tope; j++)
             {
-                if (_arreglo[j] % 2 == 0)
+                if (EsPar(_arreglo[j]))
                 {
                     arregloPares.Agregar(_arreglo[j]);
                 }
             }
             return arregloPares;
+        }
+
+        private bool EsPar(int n)
+        {
+            if(n % 2 == 0)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        //Metodo obtener primos
+        public MiArreglo ObtenerPrimos()
+        {
+            int contandoPrimos = 0;
+            for (int i = 0; i < _tope; i++)
+            {
+                if (_arreglo[i] == 1) { continue; }
+                if (EsPrimo(_arreglo[i]))
+                {
+                    contandoPrimos++;
+                }
+            }
+            var arregloPrimos = new MiArreglo(contandoPrimos);
+            for (int i = 0; j < _tope; i++)
+            {
+                if (_arreglo[i] == 1) {continue;}
+                if (EsPrimo(_arreglo[j]))
+                {
+                    arregloPrimos.Agregar(_arreglo[j]);
+                }
+            }
+            return arregloPrimos;
+        }
+
+        private bool EsPrimo(int n)
+        {
+            for (int i = 2; i < n; i++)
+            {
+                if (n % i == 0)
+                {
+                    return false;
+                }
+            }
+
+            return true;
         }
 
         public override string ToString()
